@@ -46,7 +46,7 @@ public class DiscoDuro extends Disco  {
     //metodos
     @Override
     public  void girarDisco(){
-        System.out.println("el disco esta girando a: "+ rpm + "rpm");
+        System.out.println("Se inicio el HHD con "+nombre+" esta girando el disco a la velocidad: "+ rpm);
     }
     @Override
     public String toString() {
@@ -63,7 +63,7 @@ public class DiscoDuro extends Disco  {
     public void eliminarTodaInfo(){
         metodos.eliminarContenido(contenidoDisco);
     }
-    public void repporteHHD(){
+    public void reporteHHD(){
         metodos.infoDisco(nombre, almacenanciento,contenidoDisco,tipoDisco.toString());
     }
 

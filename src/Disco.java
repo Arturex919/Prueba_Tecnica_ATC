@@ -46,7 +46,7 @@ public abstract class Disco implements IGirar {
     //para que nos muestre el disco que se va a reproducir con el contenido
     @Override
     public String toString() {
-        return "Reproduciendo disco: "+nombre +" con el contenido de : "+contenidoDisco;
+        return " disco: "+nombre +" creado con el contenido de : "+contenidoDisco;
     }
 
 

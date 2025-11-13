@@ -26,10 +26,10 @@ public class Frisbee implements IGirar {
 
     @Override
     public void girarDisco() {
-        System.out.println("El frisbee está girando y tiene un diámetro de: " + diametro + " cm");
+        System.out.println("El frisbee está girando");
     }
     @Override
     public String toString() {
-        return " Diámetro del frisbee " + diametro + " cm";
+        return " el diámetro del frisbee es de " + diametro + " cm";
     }
 }

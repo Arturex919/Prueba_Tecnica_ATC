@@ -23,18 +23,28 @@ public class Cd extends Disco{
 
     @Override
     public void girarDisco() {
-        System.out.println("Cd girar disco a la velocidad: "+ velocidadLaser);
+        System.out.println("iniciando cd "+nombre+" esta girando el disco a la velocidad: "+ velocidadLaser);
     }
     public void guardarInfo(String dato){
+
         metodos.almacenarInfo(contenidoDisco,dato);
     }
     public void tituloCd(){
-        metodos.leerDatos(contenidoDisco);
+
+            metodos.leerDatos(contenidoDisco);
+
     }
-     public void eliminarTodaInfo(){
-        metodos.eliminarContenido(contenidoDisco);
+     public void eliminarTodaInfo() {
+
+             metodos.eliminarContenido(contenidoDisco);
+
      }
      public void reporteCd(){
         metodos.infoDisco(nombre, almacenanciento,contenidoDisco,tipoDisco.toString());
      }
+
+    @Override
+    public String toString() {
+        return "Reproduciendo disco: "+nombre +" con el contenido de : "+contenidoDisco;
+    }
 }

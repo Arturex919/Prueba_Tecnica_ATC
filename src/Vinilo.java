@@ -3,6 +3,8 @@ import java.util.List;
 public class Vinilo extends  Disco{
      int rpm;
      MaterialVinilo material;
+
+     Metodos metodos = new Metodos();
      public Vinilo(){}
 
     public Vinilo(String nombre, double almacenanciento, TipoDisco tipoDisco, List<String> contenidoDisco, int rpm, MaterialVinilo material) {
@@ -15,11 +17,22 @@ public class Vinilo extends  Disco{
     public  void girarDisco(){
         System.out.println("el disco esta girando a: "+ rpm + "rpm");
     }
-    public void playVinil(){
-        System.out.println("el disco de vinilo esta reproduciendo la cancion: "+contenidoDisco);
+
+    public void guardarInfo(String dato) {
+        System.out.println("Se está guardando la canción: " + dato + " en el vinilo");
+        metodos.almacenarInfo(contenidoDisco, dato);
     }
 
-public void  reportarInfo(){
+    public void leerDatos() {
+        System.out.println("el disco de vinilo esta reproduciendo la cancion: "+contenidoDisco);
+        metodos.leerDatos(contenidoDisco);
+    }
+
+    public void eliminarTodaInfo() {
+        metodos.eliminarContenido(contenidoDisco);
+    }
+
+    public void reporteVinil() {
         System.out.println("Vinilo: " + nombre);
         System.out.println("Capacidad: " + almacenanciento + " GB");
         System.out.println("Tipo: " + tipoDisco);
@@ -30,7 +43,6 @@ public void  reportarInfo(){
         } else {
             System.out.println("(vacío)");
         }
-        System.out.println("===============================");
     }    @Override
     public String toString() {
         return "Reproduciendo vinilo: " + nombre + " [" + material + "] con el contenido de: " + contenidoDisco;

@@ -29,7 +29,7 @@ public class BluRay extends Disco{
     public void eliminarTodaInfo(){
         metodos.eliminarContenido(contenidoDisco);
     }
-    public void repporteBR(){
+    public void reporteBR(){
         metodos.infoDisco(nombre, almacenanciento,contenidoDisco,tipoDisco.toString());
     }
 

@@ -15,7 +15,7 @@ public class Rueda implements IGirar {
 
     @Override
     public void girarDisco() {
-        System.out.println("La rueda de '" + vehiculo + "' está girando con diámetro: " + diametro + " cm");
+        System.out.println("La rueda de " + vehiculo+" esta girando");
     }
 
     public String getVehiculo() {
@@ -36,6 +36,6 @@ public class Rueda implements IGirar {
 
     @Override
     public String toString() {
-        return "Rueda: " + vehiculo + " (diámetro " + diametro + " cm)";
+        return "La rueda de " + vehiculo + " es de "+diametro+" cm de diámetro ";
     }
 }

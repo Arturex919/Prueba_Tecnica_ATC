@@ -21,10 +21,9 @@ public class Metodos {
         }
     }
     public void eliminarContenido(List<String> contenidoDisco){
-        if (contenidoDisco!=null){
+
             contenidoDisco.clear();
             System.out.println("eliminando datos");
-        }
     }
     public void infoDisco(String nombre, double almacenamiento, List<String> contenidoDisco, String tipo){
         if (contenidoDisco!=null){
