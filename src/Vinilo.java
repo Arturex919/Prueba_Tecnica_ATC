@@ -34,7 +34,7 @@ public class Vinilo extends  Disco{
 
     public void reporteVinil() {
         System.out.println("Vinilo: " + nombre);
-        System.out.println("Capacidad: " + almacenanciento + " GB");
+        System.out.println("Capacidad: " + capacidad + " GB");
         System.out.println("Tipo: " + tipoDisco);
         System.out.println("Material: " + material);
         System.out.println("Velocidad de rotación: " + rpm + " RPM");

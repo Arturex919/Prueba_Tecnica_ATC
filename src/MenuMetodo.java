@@ -22,11 +22,11 @@ public class MenuMetodo {
 
     public void showAccionesCd() {
         System.out.println("===== Menu CD =====");
-        System.out.println("1. Agregar canción");
+        System.out.println("1. Agregar contenido");
         System.out.println("2. Ver contenido");
         System.out.println("3. Eliminar contenido");
         System.out.println("4. Ver detalles");
-        System.out.println("5. Girar Disco(solo con vinilo)");
+        System.out.println("5. iniciar disco)");
         System.out.println("6. reproducir contenido");
         System.out.println("7. Volver");
         System.out.print("Opción: ");
@@ -41,7 +41,7 @@ public class MenuMetodo {
         System.out.println("Nombre: ");
         String name = in.nextLine();
 
-        System.out.println("Almacenamiento (GB): ");
+        System.out.println("capacidad (GB): ");
         double capacidad = in.nextDouble();
         in.nextLine();
 
@@ -59,7 +59,7 @@ public class MenuMetodo {
         System.out.println("Nombre del Disco Duro: ");
         String nombre = in.nextLine();
 
-        System.out.println("Almacenamiento (GB): ");
+        System.out.println("capacidad (GB): ");
         double capacidad = in.nextDouble();
         in.nextLine();
 

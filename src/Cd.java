@@ -9,7 +9,7 @@ public class Cd extends Disco{
     }
 
     public Cd(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, double velocidad) {
-        super(nombre, capacidad, tipoDisco.CD, contenidoDisco);//mostramo aqui el enun para que siempre sea CD
+        super(nombre, capacidad, tipoDisco, contenidoDisco);//mostramo aqui el enun para que siempre sea CD
         this.velocidadLaser = velocidad;
     }
 
@@ -40,7 +40,7 @@ public class Cd extends Disco{
 
      }
      public void reporteCd(){
-        metodos.infoDisco(nombre, almacenanciento,contenidoDisco,tipoDisco.toString());
+        metodos.infoDisco(nombre, capacidad,contenidoDisco,tipoDisco.toString());
      }
 
     @Override

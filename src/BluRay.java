@@ -3,9 +3,9 @@ import java.util.List;
 public class BluRay extends Disco{
         int velocidadBluRay;
         Metodos metodos = new Metodos();
-    public BluRay(String nombre, double almacenanciento
+    public BluRay(String nombre, double capacidad
             , TipoDisco tipoDisco, List<String> contenidoDisco, int velocidadBluRay) {
-        super(nombre, almacenanciento, tipoDisco, contenidoDisco);
+        super(nombre, capacidad, tipoDisco, contenidoDisco);
         this.velocidadBluRay = velocidadBluRay;
     }
 
@@ -30,7 +30,7 @@ public class BluRay extends Disco{
         metodos.eliminarContenido(contenidoDisco);
     }
     public void reporteBR(){
-        metodos.infoDisco(nombre, almacenanciento,contenidoDisco,tipoDisco.toString());
+        metodos.infoDisco(nombre, capacidad,contenidoDisco,tipoDisco.toString());
     }
 
 }

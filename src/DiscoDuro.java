@@ -1,5 +1,3 @@
-import Interfaces.IGirar;
-
 import java.util.List;
 
 public class DiscoDuro extends Disco  {
@@ -12,8 +10,8 @@ public class DiscoDuro extends Disco  {
     public DiscoDuro() {
     }
 
-    public DiscoDuro(String nombre, double almacenanciento, TipoDisco tipoDisco, List<String> contenidoDisco, String conexion, int rpm) {
-        super(nombre, almacenanciento, tipoDisco, contenidoDisco);
+    public DiscoDuro(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, String conexion, int rpm) {
+        super(nombre, capacidad, tipoDisco, contenidoDisco);
         this.conexion = conexion;
         this.rpm = rpm;
     }
@@ -64,7 +62,7 @@ public class DiscoDuro extends Disco  {
         metodos.eliminarContenido(contenidoDisco);
     }
     public void reporteHHD(){
-        metodos.infoDisco(nombre, almacenanciento,contenidoDisco,tipoDisco.toString());
+        metodos.infoDisco(nombre, capacidad,contenidoDisco,tipoDisco.toString());
     }
 
 

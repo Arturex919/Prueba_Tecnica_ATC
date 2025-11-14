@@ -7,7 +7,7 @@ public abstract class Disco implements IGirar {
 
 
      String nombre;
-    double almacenanciento;
+    double capacidad;
     TipoDisco tipoDisco;
      List<String> contenidoDisco;
 
@@ -17,10 +17,10 @@ public abstract class Disco implements IGirar {
     public Disco() {
     }
     //contrustor
-    public Disco(String nombre, double almacenanciento
+    public Disco(String nombre, double capacidad
             , TipoDisco tipoDisco, List<String> contenidoDisco) {
         this.nombre = nombre;
-        this.almacenanciento = almacenanciento;
+        this.capacidad = capacidad;
         this.tipoDisco = tipoDisco;
         //creo un arraylist para que no sriva como almacen para el contenido de disco
         this.contenidoDisco =  (contenidoDisco != null) ? contenidoDisco : new ArrayList<>();//en caso de ser null va a crear una lista nueva con el iterador
@@ -31,8 +31,8 @@ public abstract class Disco implements IGirar {
         this.nombre = nombre;
     }
 
-    public void setAlmacenanciento(double almacenanciento) {
-        this.almacenanciento = almacenanciento;
+    public void setCapacidad(double capacidad) {
+        this.capacidad = capacidad;
     }
 
     public void setTipoDisco(TipoDisco tipoDisco) {

@@ -25,13 +25,13 @@ public class Metodos {
             contenidoDisco.clear();
             System.out.println("eliminando datos");
     }
-    public void infoDisco(String nombre, double almacenamiento, List<String> contenidoDisco, String tipo){
+    public void infoDisco(String nombre, double capacidad, List<String> contenidoDisco, String tipo){
         if (contenidoDisco!=null){
             for (String discos : contenidoDisco) {
                 System.out.println("informacion del disco: ");
                 System.out.println("Disco: " + nombre);
                 System.out.println("Tipo: " + tipo);
-                System.out.println("Capacidad: " + almacenamiento + " GB");
+                System.out.println("Capacidad: " + capacidad + " GB");
             }
         }
     }
