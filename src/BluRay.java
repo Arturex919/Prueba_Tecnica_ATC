@@ -3,9 +3,25 @@ import java.util.List;
 public class BluRay extends Disco{
         int velocidadBluRay;
         Metodos metodos = new Metodos();
-    public BluRay(String nombre, double capacidad
-            , TipoDisco tipoDisco, List<String> contenidoDisco, int velocidadBluRay) {
-        super(nombre, capacidad, tipoDisco, contenidoDisco);
+
+        //construc
+
+    public BluRay() {
+    }
+
+    public BluRay(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, String brand, int velocidadBluRay) {
+        super(nombre, capacidad, tipoDisco, contenidoDisco, brand);
+        this.velocidadBluRay = velocidadBluRay;
+        this.metodos = metodos;
+    }
+
+    //getters and setter
+
+    public int getVelocidadBluRay() {
+        return velocidadBluRay;
+    }
+
+    public void setVelocidadBluRay(int velocidadBluRay) {
         this.velocidadBluRay = velocidadBluRay;
     }
 
@@ -16,8 +32,9 @@ public class BluRay extends Disco{
     }
     @Override
     public String toString() {
-        return "Reproduciendo disco: "+nombre +" con el contenido de : "+contenidoDisco;
+        return "Reproduciendo BluRay: " + nombre + " [" + brand + "] con el contenido: " + contenidoDisco;
     }
+
     public void guardarInfoBR(String dato){
         System.out.println("Se esta guardando los datos en el BluRay: " + dato);
         metodos.almacenarInfo(contenidoDisco,dato);

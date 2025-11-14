@@ -10,6 +10,7 @@ public abstract class Disco implements IGirar {
     double capacidad;
     TipoDisco tipoDisco;
      List<String> contenidoDisco;
+    String brand;
 
      //constructores
 
@@ -17,14 +18,15 @@ public abstract class Disco implements IGirar {
     public Disco() {
     }
     //contrustor
-    public Disco(String nombre, double capacidad
-            , TipoDisco tipoDisco, List<String> contenidoDisco) {
+
+    public Disco(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, String brand) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tipoDisco = tipoDisco;
-        //creo un arraylist para que no sriva como almacen para el contenido de disco
-        this.contenidoDisco =  (contenidoDisco != null) ? contenidoDisco : new ArrayList<>();//en caso de ser null va a crear una lista nueva con el iterador
+        this.contenidoDisco = contenidoDisco;
+        this.brand = brand;
     }
+
     //getter y setters
 
     public void setNombre(String nombre) {
@@ -46,7 +48,7 @@ public abstract class Disco implements IGirar {
     //para que nos muestre el disco que se va a reproducir con el contenido
     @Override
     public String toString() {
-        return " disco: "+nombre +" creado con el contenido de : "+contenidoDisco;
+        return "CD: " + nombre + " [" + brand + "] con el contenido: " + contenidoDisco;
     }
 
 

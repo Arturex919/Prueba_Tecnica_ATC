@@ -10,12 +10,13 @@ public class DiscoDuro extends Disco  {
     public DiscoDuro() {
     }
 
-    public DiscoDuro(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, String conexion, int rpm) {
-        super(nombre, capacidad, tipoDisco, contenidoDisco);
-        this.conexion = conexion;
+    public DiscoDuro(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, String brand, int rpm, String conexion) {
+        super(nombre, capacidad, tipoDisco, contenidoDisco, brand);
         this.rpm = rpm;
+        this.conexion = conexion;
     }
-//getters y setters
+
+    //getters y setters
 
     public int getRpm() {
         return rpm;
@@ -48,8 +49,9 @@ public class DiscoDuro extends Disco  {
     }
     @Override
     public String toString() {
-        return "Reproduciendo disco: "+nombre +" con el contenido de : "+contenidoDisco;
+        return "Reproduciendo Disco Duro: " + nombre + " [" + brand + "] con el contenido: " + contenidoDisco;
     }
+
     public void guardarInfoHHD(String dato){
         System.out.println("Se esta escribiendo los datos con cabezal magnético: " + dato);
         metodos.almacenarInfo(contenidoDisco,dato);

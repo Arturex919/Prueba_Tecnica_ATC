@@ -8,9 +8,10 @@ public class Cd extends Disco{
     public Cd() {
     }
 
-    public Cd(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, double velocidad) {
-        super(nombre, capacidad, tipoDisco, contenidoDisco);//mostramo aqui el enun para que siempre sea CD
-        this.velocidadLaser = velocidad;
+    public Cd(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, String brand,double velocidadLaser) {
+        super(nombre, capacidad, tipoDisco, contenidoDisco, brand);
+        this.metodos = metodos;
+        this.velocidadLaser = velocidadLaser;
     }
 
     public double getVelocidadLaser() {
@@ -45,6 +46,7 @@ public class Cd extends Disco{
 
     @Override
     public String toString() {
-        return "Reproduciendo disco: "+nombre +" con el contenido de : "+contenidoDisco;
+        return "Reproduciendo CD: " + nombre + " [" + brand + "] con el contenido: " + contenidoDisco;
     }
+
 }

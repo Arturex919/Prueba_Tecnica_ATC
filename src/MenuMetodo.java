@@ -48,7 +48,12 @@ public class MenuMetodo {
         System.out.println("Velocidad del disco: ");
         double velocidad = in.nextDouble();
         in.nextLine();
-        Cd cd = new Cd(name, capacidad, TipoDisco.CD, new ArrayList<>(), velocidad);
+
+        System.out.print("Marca: ");
+        String brand = in.nextLine();
+
+        Cd cd = new Cd(name, capacidad, TipoDisco.CD, new ArrayList<>(),brand, velocidad );
+
         addDisco(cd);
         System.out.println("se creo el disco correctamente" + "\n");
 
@@ -69,9 +74,11 @@ public class MenuMetodo {
 
         System.out.println("Tipo de conexión (USB/SATA): ");
         String conexion = in.nextLine().toUpperCase();
+        System.out.print("Marca: ");
+        String brand = in.nextLine();
 
         if (conexion.equalsIgnoreCase("USB") || conexion.equalsIgnoreCase("SATA")) {
-            DiscoDuro hdd = new DiscoDuro(nombre, capacidad, TipoDisco.DISCODURO, new ArrayList<>(), conexion, rpm);
+            DiscoDuro hdd = new DiscoDuro(nombre, capacidad, TipoDisco.DISCODURO, new ArrayList<>(), conexion, rpm, brand);
             addDisco(hdd);
             System.out.println("se creo el disco correctamente" + "\n");
 
@@ -92,7 +99,10 @@ public class MenuMetodo {
         int velocidad = in.nextInt();
         in.nextLine();
 
-        BluRay bluRay = new BluRay(nombre, capacidad, TipoDisco.BLU_RAY, new ArrayList<>(), velocidad);
+        System.out.print("Marca: ");
+        String brand = in.nextLine();
+
+        BluRay bluRay = new BluRay(nombre, capacidad, TipoDisco.BLU_RAY, new ArrayList<>(), brand,velocidad);
         addDisco(bluRay);
         System.out.println("se creo el disco correctamente" + "\n");
     }
@@ -128,7 +138,10 @@ public class MenuMetodo {
         }
 
         // Crear el objeto Vinilo
-        Vinilo vinilo = new Vinilo(nombre, capacidad, TipoDisco.VINILO, new ArrayList<>(), rpm, material);
+        System.out.print("Marca: ");
+        String brand = in.nextLine();
+
+        Vinilo vinilo = new Vinilo(nombre, capacidad, TipoDisco.VINILO, new ArrayList<>(), brand,rpm, material );
         addDisco(vinilo);
 
         System.out.println("Vinilo creado correctamente:");

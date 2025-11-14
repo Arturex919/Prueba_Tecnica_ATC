@@ -5,12 +5,23 @@ public class Vinilo extends  Disco{
      MaterialVinilo material;
 
      Metodos metodos = new Metodos();
+     //construct
      public Vinilo(){}
 
-    public Vinilo(String nombre, double almacenanciento, TipoDisco tipoDisco, List<String> contenidoDisco, int rpm, MaterialVinilo material) {
-        super(nombre, almacenanciento, tipoDisco, contenidoDisco);
+
+    public Vinilo(String nombre, double capacidad, TipoDisco tipoDisco, List<String> contenidoDisco, String brand, int rpm, MaterialVinilo material) {
+        super(nombre, capacidad, tipoDisco, contenidoDisco, brand);
         this.rpm = rpm;
         this.material = material;
+    }
+
+    //getters and setters
+    public int getRpm() {
+        return rpm;
+    }
+
+    public void setRpm(int rpm) {
+        this.rpm = rpm;
     }
 
     @Override
@@ -45,7 +56,7 @@ public class Vinilo extends  Disco{
         }
     }    @Override
     public String toString() {
-        return "Reproduciendo vinilo: " + nombre + " [" + material + "] con el contenido de: " + contenidoDisco;
+        return "Reproduciendo Vinilo: " + nombre + " [" + brand + "] material: " + material + " con el contenido: " + contenidoDisco;
     }
 
 }
